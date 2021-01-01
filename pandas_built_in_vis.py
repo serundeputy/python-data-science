@@ -8,6 +8,9 @@ df1 = pd.read_csv(
     index_col = 0)
 df2 = pd.read_csv(
     'Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/df2')
+df3 = pd.read_csv(
+    'Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/df3')
+
 print(df1.head())
 print(df1.index)
 # df1['A'].hist(bins = 30)
@@ -21,5 +24,7 @@ print(df1.index)
 df = pd.DataFrame(np.random.randn(1000, 2), columns = ['a', 'b'])
 # df.plot.hexbin(x = 'a', y = 'b', gridsize = 25, cmap = 'coolwarm')
 # df.plot.kde()
-df2.plot.density()
+# df2.plot.density()
+df3['a'].plot.hist(color = 'red', alpha = 0.4, bins = 40)
+plt.style.use('ggplot')
 plt.show()
